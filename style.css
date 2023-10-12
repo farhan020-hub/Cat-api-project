@@ -121,35 +121,18 @@ h1{
 /* share button styling */
 
 #share-button {
-
-    margin-left:750px;
-    align-items: center;
-    background-color: #fee6e3;
-    border: 2px solid #111;
-    border-radius: 8px;
-    box-sizing: border-box;
-    color: #111;
+    background-color:#1c1d44; /* Instagram's brand color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    display: flex;
-    font-family: Inter,sans-serif;
-    font-size: 16px;
-    height: 48px;
-    justify-content: center;
-    line-height: 24px;
-    max-width: 100%;
-    padding: 0 25px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    
-}
-
-#share-button:hover {
-    background-color: indianred;
-}
+  }
+  
+  #share-button:hover {
+    background-color: #10db8d; /* Slightly lighter color on hover */
+  }
+  
 
 /* Add this CSS for the voting buttons and vote count */
 .like-buttons {
