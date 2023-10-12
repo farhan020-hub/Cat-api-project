@@ -34,16 +34,29 @@ h1{
     
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 #cat-image {
     height: 50vh;
     width: 50vh;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 1rem;
+    animation: pulse 4s infinite;
 }
 
 #new-cat-button {
-    
+
     margin-left:750px;
     align-items: center;
     background-color: #fee6e3;
@@ -66,9 +79,42 @@ h1{
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    
 }
 
 #new-cat-button:hover {
     background-color: indianred;
 }
+
+/* Add this CSS for the voting buttons and vote count */
+.like-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#like-button,
+#dislike-button {
+    background-color: #e5ebeb;
+    color: #0c0b0b;
+    padding: 0 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 5px;
+    line-height: 24px;
+}
+
+#like-button:hover,
+#dislike-button:hover {
+    background-color: #0056b3;
+}
+
+#like-count {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
 
