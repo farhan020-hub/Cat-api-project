@@ -86,6 +86,71 @@ h1{
     background-color: indianred;
 }
 
+/* favourite button styling */
+#favorite-button {
+
+    margin-left:750px;
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    
+}
+
+#favorite-button:hover {
+    background-color: indianred;
+}
+
+/* share button styling */
+
+#share-button {
+
+    margin-left:750px;
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    
+}
+
+#share-button:hover {
+    background-color: indianred;
+}
+
 /* Add this CSS for the voting buttons and vote count */
 .like-buttons {
     display: flex;
@@ -109,7 +174,7 @@ h1{
 
 #like-button:hover,
 #dislike-button:hover {
-    background-color: #0056b3;
+    background-color: indianred;
 }
 
 #like-count {
