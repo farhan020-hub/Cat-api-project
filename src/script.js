@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const catContainer = document.querySelector(".cat-container");
+   
+    // getting elements by their ID
     const catImage = document.getElementById("cat-image");
     const newCatButton = document.getElementById("new-cat-button");
     const likeButton = document.getElementById("like-button");
@@ -129,7 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
     favoriteButton.addEventListener("click", toggleFavorite);
 
     // Sharing to twitter functionality
-
     // Function to open Twitter share dialog
     function shareOnTwitter() {
         // Specify the text and image URL you want to share
