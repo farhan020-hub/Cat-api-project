@@ -1,10 +1,10 @@
 # Independent_project
 
-Certainly! Below is a README for the code you provided, explaining its functionality and usage.
-
 # Cat API Website
 
 This is a simple web application that allows users to view random cat images, like or dislike them, and add them to their favorites. It also provides a "Share on Twitter" button to share the cat images on Twitter.
+
+![Alt text](<assets/Screenshot from 2023-10-14 13-20-28.png>)
 
 ## Table of Contents
 
