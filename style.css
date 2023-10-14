@@ -52,7 +52,7 @@ h1 {
 }
 
 /* media query to adjust the cat image size on mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 450px) {
     #cat-image {
       height: auto; /* Allow the image to scale with its width */
       width: 100%; /* Set the image width to 100% of its container */
@@ -61,7 +61,7 @@ h1 {
       animation: none; /* Remove the pulsing animation on mobile */
     }
   }
-  
+
 /* new cat button styling */
 #new-cat-button {
   width: 220px;
