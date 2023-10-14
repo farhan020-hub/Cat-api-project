@@ -51,6 +51,17 @@ h1 {
   animation: pulse 4s infinite;
 }
 
+/* media query to adjust the cat image size on mobile devices */
+@media (max-width: 768px) {
+    #cat-image {
+      height: auto; /* Allow the image to scale with its width */
+      width: 100%; /* Set the image width to 100% of its container */
+      max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+      margin-bottom: 1rem;
+      animation: none; /* Remove the pulsing animation on mobile */
+    }
+  }
+  
 /* new cat button styling */
 #new-cat-button {
   width: 220px;
