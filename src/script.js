@@ -56,15 +56,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add click event listeners to like and dislike buttons
     likeButton.addEventListener("click", () => {
-        voteCat(1);
+        likeCat(1);
     });
 
     dislikeButton.addEventListener("click", () => {
-        voteCat(-1);
+        likeCat(-1);
     });
 
     // Function to vote for the current cat image
-    function voteCat(value) {
+    function likeCat(value) {
         // Your Cat API key
         const apiKey = "live_FAhOGMgdfgR2q8m21nLaaniHQk4cIJcdVQ90VJY7mq1pTa5hbKanhW1R0k67z8IS";
 
