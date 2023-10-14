@@ -135,20 +135,30 @@ document.addEventListener("DOMContentLoaded", () => {
         // Specify the text and image URL you want to share
         const text = "Check out this adorable cat!";
         const imageUrl = catImage.src; // Use the currently displayed cat image URL
-
+    
         // Construct the Twitter share URL with the text and image
         const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
             text
         )}&url=${encodeURIComponent(imageUrl)}`;
-
-        // Open a new window or tab with the Twitter share URL
-        window.open(twitterShareUrl, "_blank");
+    
+        // Create a hidden anchor element (link) with the Twitter share URL
+        const twitterShareLink = document.createElement("a");
+        twitterShareLink.href = twitterShareUrl;
+        twitterShareLink.style.display = "none"; // Hide the link
+    
+        // Append the link to the document
+        document.body.appendChild(twitterShareLink);
+    
+       // Click the link which opens the share dialog
+        twitterShareLink.click();
+    
+        // Remove the link from the document
+        document.body.removeChild(twitterShareLink);
     }
-
+    
     shareButton.addEventListener("click", () => {
         // Call the function to open the Twitter share dialog
         shareOnTwitter();
-
-
     });
+    
 });
