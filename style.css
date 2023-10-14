@@ -19,16 +19,17 @@ h1 {
 
 #container {
   text-align: center;
-  padding: 6rem;
+  padding: 4rem;
 }
 
 .cat-container {
-  background-color: #659ca3;
+  background-color: rgba(7, 121, 115, 0.5);
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
+/* keyframes for pulsing the cat image */
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -50,29 +51,77 @@ h1 {
   animation: pulse 4s infinite;
 }
 
+/* new cat button styling */
 #new-cat-button {
-  margin-left: 750px;
-  align-items: center;
-  background-color: #fee6e3;
-  border: 2px solid #111;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #111;
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
   cursor: pointer;
-  display: flex;
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  height: 48px;
-  justify-content: center;
-  line-height: 24px;
-  max-width: 100%;
-  padding: 0 25px;
   position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+#new-cat-button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+#new-cat-button:active:after {
+  background: transparent;
+}
+
+#new-cat-button:hover:before {
+  opacity: 1;
+}
+
+#new-cat-button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 #new-cat-button:hover {
@@ -80,33 +129,81 @@ h1 {
 }
 
 /* favourite button styling */
+
 #favorite-button {
-  margin-left: 750px;
-  align-items: center;
-  background-color: #fee6e3;
-  border: 2px solid #111;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #111;
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
   cursor: pointer;
-  display: flex;
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  height: 48px;
-  justify-content: center;
-  line-height: 24px;
-  max-width: 100%;
-  padding: 0 25px;
   position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+#favorite-button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+#favorite-button:active:after {
+  background: transparent;
+}
+
+#favorite-button:hover:before {
+  opacity: 1;
 }
 
 #favorite-button:hover {
   background-color: indianred;
+}
+
+#favorite-button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 /* share button styling */
@@ -116,7 +213,7 @@ h1 {
   color: #fff;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -125,7 +222,7 @@ h1 {
 }
 
 /* Add this CSS for the liking buttons and vote count */
-.like-buttons {
+.like-button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -150,7 +247,8 @@ h1 {
   background-color: indianred;
 }
 
-#like-count {
+#likes-count {
   text-align: center;
   font-size: 1.2rem;
+  color: rgb(255, 244, 226);
 }
