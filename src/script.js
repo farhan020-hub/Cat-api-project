@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-   
+
     // getting elements by their ID
     const catImage = document.getElementById("cat-image");
     const newCatButton = document.getElementById("new-cat-button");
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Your Cat API key
         const apiKey = "live_FAhOGMgdfgR2q8m21nLaaniHQk4cIJcdVQ90VJY7mq1pTa5hbKanhW1R0k67z8IS";
 
-        // Example request body:
+    //  requestbody
         const requestBody = {
             image_id: "id_of_the_image",
             sub_id: "optional_unique_id_of_your_user",
@@ -89,17 +89,17 @@ document.addEventListener("DOMContentLoaded", () => {
         })
             .then((response) => {
                 if (response.status === 200 || response.status === 201) {
-                    // Successful vote
-                    console.log("Vote successful");
+                    // Successful like
+                    console.log("like successful");
                     currentLikeCount += value; // Update the current like count
                     updateLikeCount(); // Update the displayed like count
                 } else {
                     // Handle errors
-                    console.error("Error voting:", response.status);
+                    console.error("Error liking:", response.status);
                 }
             })
             .catch((error) => {
-                console.error("Error voting:", error);
+                console.error("Error liking:", error);
             });
     }
 
@@ -115,10 +115,10 @@ document.addEventListener("DOMContentLoaded", () => {
             // Update the UI based on the favorited state
             if (isFavorited) {
                 favoriteButton.textContent = "Unfavorite"; // Change button text
-                favoriteButton.style.backgroundColor = "red"; // Change button color
+
             } else {
                 favoriteButton.textContent = "Favorite";
-                favoriteButton.style.backgroundColor = "green";
+
             }
         } else {
             // Handle API request failure, e.g., display an error message
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
     favoriteButton.addEventListener("click", toggleFavorite);
 
     // Sharing to twitter functionality
-    // Function to open Twitter share dialog
+    // Function to open Twitter share dialog(NOTE: LOGIN BEFORE BEING ABLE TO SHARE)
     function shareOnTwitter() {
         // Specify the text and image URL you want to share
         const text = "Check out this adorable cat!";
