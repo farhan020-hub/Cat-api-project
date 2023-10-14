@@ -38,7 +38,7 @@ Before running the Cat API Website, you need to have the following:
 
 4. You can click the "Favorite" button to add the currently displayed cat image to your favorites. The button color will change to red to indicate that the image is favorited. Clicking it again will unfavorite the image.
 
-5. The "Share on Twitter" button allows you to share the currently displayed cat image on Twitter. It opens a new tab or window with a Twitter share dialog pre-filled with the cat image link and a default text.
+5. The "Share on Twitter" button allows you to share the currently displayed cat image on Twitter. It opens a new tab or window with a Twitter share dialog pre-filled with the cat image link and a default text.To be able to share the cat image link you must login into your twitter account.
 
 ## Features
 
